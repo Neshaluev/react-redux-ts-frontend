@@ -1,0 +1,32 @@
+.block-head-view{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.block-head-view--back, .block-head-view--edit, .block-head-view--delete{
+    width: 60px;
+    height: 60px;
+    border: 2px solid #60666d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.block-head-view--controller{
+    display: flex;
+}
+.block-head-view--delete {
+  margin-left: 10px;  
+}
+.block-head-view--delete{
+    // margin-right: 40px;
+}
+.block-head-view--edit:hover, .block-head-view--delete:hover, .block-head-view--back:hover {
+    transition: all .2s ease;
+    background-color: #c0c4c9;
+}
+.block-head-view--edit:hover > i, .block-head-view--delete:hover > i, .block-head-view--back:hover > i{
+    transition: all .2s ease;
+    transform: scale(1.1);
+}

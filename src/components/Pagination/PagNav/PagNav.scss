@@ -1,0 +1,29 @@
+.pagination--list{
+    display: inline-flex;
+    list-style: none;
+}
+.pagination--list__item{
+    cursor: pointer;
+    font-size: 18px;
+    margin: 0 8px;
+}
+
+.pagination--list__item-number{
+    display: block;
+    color: #60666d;
+    transition: all .1s ease;
+    padding: 0 5px;
+    &:hover{
+        color: #2e2e2e;
+        font-weight: bold;
+    }
+}
+.pagination--list__item-number.active{
+    color: #2e2e2e;
+    font-weight: bold;
+}
+
+.pagination--list__button:hover {
+    color: #2e2e2e;
+    font-weight: bold;
+}

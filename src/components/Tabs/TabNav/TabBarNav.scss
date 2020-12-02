@@ -1,0 +1,24 @@
+.tab-bar-item {
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .tab-bar-item.active {
+    height: auto;
+  }
+  
+  .nav-item{
+    border: 1px solid #60666d;
+    border-right: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10px;
+    outline: none;
+  }
+  .nav-item.active{
+    background-color: #60666d;
+    color: white;
+  }
+  .nav-item:last-child{
+    border: 1px solid #2e2e2e;
+  }

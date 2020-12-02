@@ -1,0 +1,26 @@
+// container
+.container{
+    display: flex;
+    width: 100%;
+    margin-left: 15%;
+}
+// contol panel
+.control-panel{
+    width: 100% ;
+}
+.control-panel--top{
+    display: flex;
+    width: 100%;
+}
+.control-panel--top{
+    justify-content: space-between;
+}
+.control-panel--body{
+    border-top: 1px solid rgba($color: #60666d, $alpha: .5);;
+    padding: 10px 40px;
+    display: flex;
+    flex-direction: column;
+    width: 100% ;
+    background-color: #fafafa;
+    justify-content: center;
+}

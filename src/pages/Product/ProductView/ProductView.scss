@@ -1,0 +1,21 @@
+.product-view--title{
+    margin: 30px 0;
+}
+.product-view--field-inline {
+    display: inline-flex;
+    & > div {
+        margin-left: 20px;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
+.product-view--field{
+    margin: 30px 20px;
+}
+.product-view--image{
+    width: 500px;
+}
+.product-view--select{
+    max-width: 200px;
+}

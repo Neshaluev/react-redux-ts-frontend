@@ -1,0 +1,16 @@
+.not-found-page{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.not-found-page__redirect{
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    text-decoration: underline;
+}

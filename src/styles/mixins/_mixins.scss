@@ -1,0 +1,166 @@
+//---------------------------------------------------
+// Font
+//---------------------------------------------------
+
+@mixin font(
+  $size: null,
+  $style: null,
+  $weight: null,
+  $variant: null,
+  $family: null
+) {
+  font-size: $size;
+  font-style: $style;
+  font-weight: $weight;
+  font-variant: $variant;
+  font-family: $family;
+}
+
+//---------------------------------------------------
+// Size
+//---------------------------------------------------
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+//---------------------------------------------------
+// Size
+//---------------------------------------------------
+
+@mixin position(
+  $position,
+  $top: null,
+  $right: null,
+  $bottom: null,
+  $left: null
+) {
+  position: $position;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+}
+
+//---------------------------------------------------
+// Size
+//---------------------------------------------------
+
+@mixin button() {
+  position: relative;
+  display: inline-block;
+  line-height: 1.4;
+  text-align: center;
+  background-image: none;
+  border-style: solid;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  @include user-select(none);
+  &:focus,
+  &:active {
+    outline: none;
+  }
+  &:hover,
+  &:focus,
+  &.focus {
+    text-decoration: none;
+  }
+
+  &:active,
+  &.active {
+    background-image: none;
+    outline: 0;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: 0.65;
+    pointer-events: none;
+  }
+}
+@mixin button-color(
+  $btn-color,
+  $btn-color-hover,
+  $btn-bg-color,
+  $btn-bg-hover-color,
+  $btn-border-width,
+  $btn-border-color,
+  $btn-border-hover-color
+) {
+  color: $btn-color;
+  background: $btn-bg-color;
+  border-color: $btn-border-color;
+  border-width: $btn-border-width;
+
+  &:hover {
+    @include cubic-transition(
+      $delay: 0,
+      $duration: 300ms,
+      $property: (
+        all,
+      )
+    );
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {
+    color: $btn-color-hover;
+    background: $btn-bg-hover-color;
+    border-color: $btn-border-hover-color;
+  }
+}
+@mixin button-size($btn-font-size, $btn-fweight, $btn-padding) {
+  font-size: $btn-font-size;
+  font-weight: $btn-fweight;
+  padding: $btn-padding;
+}
+// --------------------------------------------------
+// User Select
+// --------------------------------------------------
+
+@mixin user-select($user-select) {
+  -webkit-user-select: ($user-select);
+  -moz-user-select: ($user-select);
+  -ms-user-select: ($user-select);
+  user-select: ($user-select);
+}
+
+// --------------------------------------------------
+// Cubic Bezier Transition
+// --------------------------------------------------
+
+@mixin cubic-transition($delay, $duration, $property) {
+  transition: {
+    duration: $duration;
+    property: $property;
+    timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+  }
+}
+
+// --------------------------------------------------
+// Rotate
+// --------------------------------------------------
+
+@mixin rotate($degrees) {
+  -webkit-transform: rotate($degrees);
+  -moz-transform: rotate($degrees);
+  transform: rotate($degrees);
+}
+
+// --------------------------------------------------
+// Translate 3D Transition
+// --------------------------------------------------
+
+@mixin translate3d($x, $y, $z) {
+  -webkit-transform: translate3d($x, $y, $z);
+  -moz-transform: translate3d($x, $y, $z);
+  transform: translate3d($x, $y, $z);
+}

@@ -1,0 +1,79 @@
+
+.input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  
+    width: 100%;
+    position: relative;
+    height: 50px;
+    input{
+        width: 100%;
+        height: 100%;
+        border: none;
+        color: #595f6e;
+        outline: none;
+    }
+    label{
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        color: #2e2e2e;
+        border-bottom: 1px solid #000;
+        &:after{
+            content: " ";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            bottom: -1px;
+            border-bottom: 3px solid #2e2e2e;
+            transform: translateX(-100%);
+            transition: transform .3s ease;
+        }
+        .content-name{
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            transition: all .3s ease;
+            color: #2e2e2e;
+        }
+    }
+}
+
+input:focus + .label-name .content-name,
+.input input:valid + .label-name .content-name{
+    transform: translateY(-150%);
+    font-size: 14px;
+    color: #2e2e2e;
+}
+input:focus + .label-name::after, 
+.input input:valid + .label-name::after {
+    transform: translateX(0%);
+    color: #2e2e2e;
+
+}
+
+.input.error {
+    color:  rgb(253, 61, 61) ;
+}
+.input.error + .label-name {
+    color:  rgb(253, 61, 61) ;
+
+}
+.input.error + label {
+    &:after{
+        border-bottom: 3px solid rgb(253, 61, 61);
+    }
+}
+.input.error + .label-name > .content-name{
+    color:  rgb(253, 61, 61) !important;
+}
+.error{
+    color: rgb(253, 61, 61);
+    margin-top: 10px;
+}

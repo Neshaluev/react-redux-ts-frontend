@@ -1,0 +1,17 @@
+.category-modal__filed{
+    background-color: transparent;
+}
+.category-modal__filed, .category-modal__footer{
+    padding: 5px 0;
+}
+.category-modal__description-text{
+    margin-bottom: 15px;
+}
+.category-modal__footer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.category-modal__footer button:last-child{
+    margin-left: 10px;
+}

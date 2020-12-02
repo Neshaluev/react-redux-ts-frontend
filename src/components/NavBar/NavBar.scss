@@ -1,0 +1,64 @@
+.navbar{
+    width: 15%;
+    position: fixed;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(251,251,251,1) 48%, rgba(235,235,235,1) 100%);
+    box-shadow: 2px 1px 2px rgba($color: #000000, $alpha: .2);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    flex-direction: column;
+}
+.navbar--list{
+    list-style: none;
+    padding: 40px;
+    background-color: white;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.navbar--list__item{
+    text-align: left;
+    width: 100%;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+.navbar--list__item:last-child{
+    margin-bottom: 20px;
+}
+.navbar--logo{
+    margin-left:40px;
+    width: 100%;
+}
+.navbar--exit{
+    padding-bottom: 20px;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 0;
+}
+.navbar--logo__text, .navbar--exit__text{
+    color:  #2e2e2e;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+@media (max-width: 1400px) {
+    .navbar--logo{
+        margin-left: 20px;
+    }
+    .navbar--list{
+        padding: 20px;
+    }
+    .navbar--list__item{
+        margin-top: 10px;
+    }
+    .navbar--link{
+        font-size: 14px;
+    }
+    .navbar--logo__text{
+        font-size: 20px;
+    }
+    .navbar--exit__text{
+        font-size: 15px;
+    }
+}

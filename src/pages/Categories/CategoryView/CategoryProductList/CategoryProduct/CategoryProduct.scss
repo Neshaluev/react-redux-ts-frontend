@@ -1,0 +1,29 @@
+
+.category-view--item{
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #c0c4c9;
+    padding: 10px;
+    margin: 10px 0;
+}
+.category-view--item__inform{
+    display: inline-flex;
+}
+.category-view--item__index{
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.category-view--item__controller{
+    display: inline-flex;
+}
+.category-view--item__controller-item{
+    cursor: pointer;
+    margin-left: 8px;
+    transition: all .1s ease;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
